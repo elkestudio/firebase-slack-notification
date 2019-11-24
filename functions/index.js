@@ -5,7 +5,7 @@ exports.notifyNewSignup = functions.auth.user().onCreate(user => {
   const email = user.email;
 
   return request.post(
-    "https://hooks.slack.com/services/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",
+    "your_slack_webhook_here",
     { json: { text: `🔥 New signup from ${email}! 🔥` } }
   );
 });
